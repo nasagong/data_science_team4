@@ -306,3 +306,51 @@ df, results = run_analysis(days=30)
 - 다중 기간 예측 (1시간, 1일, 7일)
 - 직관적인 시각화 제공
 - 모델 성능 평가 및 검증 
+
+## 사용 방법 - Colab Demo
+
+리드미 최상단의 Colab Quick Start를 복사해
+[Colab](https://colab.google/) 환경에서 바로 실행행
+
+## 사용 방법 - API 서버
+
+### 1. 환경 설정
+```bash
+# 가상환경 생성 및 활성화
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+.\venv\Scripts\activate   # Windows
+
+# 의존성 설치
+pip install -r requirements.txt
+```
+
+### 2. API 서버 실행
+```bash
+python main.py
+```
+서버가 `http://localhost:8000`에서 실행됩니다.
+
+### 3. API 엔드포인트 테스트
+
+#### 차트 데이터 조회
+```bash
+curl http://localhost:8000/api/chart
+```
+
+#### 가격 예측
+```bash
+# 1시간 예측
+curl http://localhost:8000/api/predict/1h
+
+# 1일 예측
+curl http://localhost:8000/api/predict/1d
+
+# 7일 예측
+curl http://localhost:8000/api/predict/7d
+```
+
+#### 공포/탐욕 지수 조회
+```bash
+curl http://localhost:8000/api/fgindex
+```
