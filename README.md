@@ -310,7 +310,7 @@ df, results = run_analysis(days=30)
 ## 사용 방법 - Colab Demo
 
 리드미 최상단의 Colab Quick Start를 복사해
-[Colab](https://colab.google/) 환경에서 바로 실행행
+[Colab](https://colab.google/) 환경에서 바로 실행
 
 ## 사용 방법 - API 서버
 
